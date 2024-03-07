@@ -17,7 +17,7 @@ $json = <<<END
 			"step": "installPlugin",
 			"pluginZipFile": {
 				"resource": "url",
-				"url": "https://codeload.github.com/Automattic/tour/zip/refs/heads/restrict-by-url"
+				"url": "https://alex.kirk.at/tour-zip.php"
 			}
 		},
 		{
