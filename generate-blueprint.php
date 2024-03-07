@@ -1,5 +1,5 @@
 <?php
-$tour_json = str_replace( array( "'", PHP_EOL ), array( "\\'", "' . PHP_EOL . '" ), file_get_contents( __DIR__ . '/tour.json' ) );
+$tour_json = str_replace( array( "'", '"', PHP_EOL, "\t" ), array( "\\'", '\\"', "' . PHP_EOL . '", '' ), trim( file_get_contents( __DIR__ . '/tour.json' ) ) );
 $json = <<<END
 {
 	"landingPage": "/wp-admin/",
@@ -28,4 +28,4 @@ $json = <<<END
 	]
 }
 END;
-file_put_contents( __DIR__ . '/blueprint-tour.json', $json);
+file_put_contents( __DIR__ . '/blueprint.json', $json);
